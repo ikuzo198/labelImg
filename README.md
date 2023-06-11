@@ -22,6 +22,7 @@ make qt5py3
 python3 labelImg.py
 ```
 
-## Local
+## Localでの準備
 
-- labelImg/datasets 内にアノテーションしたいデータセットを持ってくる
+- `labelImg/datasets` 内にアノテーションしたいデータセットを持ってくる
+- `data/predefined_classes.txt`を対象データセット用に変更する
