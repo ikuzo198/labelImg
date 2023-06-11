@@ -11,6 +11,3 @@ ADD requirements/requirements-linux-python3.txt /labelimg
 RUN pip install -U pip && \
     pip3 install -r requirements-linux-python3.txt
 
-# cmake
-# RUN make qt5py3
-

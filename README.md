@@ -4,16 +4,24 @@
 
 ```bash
 git clone git@github.com:ikuzo198/labelImg.git
+cd labelImg
+git checkout ycb
 ```
 
 ## Build the container
 
 ```bash
-cd labelImg
+sudo sh docker/build-docker.sh
 sudo sh docker/run-docker.sh 
 ```
 
-## TODO
-[] 他の環境で動作確認
-[] labelImg/data/predefined_classes.txt がロードされるようにする
+## In container
 
+```bash
+make qt5py3
+python3 labelImg.py
+```
+
+## Local
+
+- labelImg/datasets 内にアノテーションしたいデータセットを持ってくる
