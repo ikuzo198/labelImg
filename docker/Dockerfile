@@ -1,6 +1,16 @@
-FROM ludwigprager/labelimg:1
+FROM brunneis/python:3.7.0-ubuntu-18.04
 
 WORKDIR /labelimg
 
-ENV PS1="\e[32m\u@\h \e[35m \e[34m\w\n\e[0m> "
+# install apt
+RUN apt update && \
+    apt install -y --no-install-recommends pyqt5-dev-tools make python3-pip python3-pyqt5 python-pyqt5
+
+# install pip
+ADD requirements/requirements-linux-python3.txt /labelimg
+RUN pip install -U pip && \
+    pip3 install -r requirements-linux-python3.txt
+
+# cmake
+# RUN make qt5py3
 
